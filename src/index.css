@@ -1,0 +1,242 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyan-50: #ecfeff;
+  --color-cyan-100: #cffafe;
+  --color-cyan-200: #a5f3fc;
+  --color-cyan-300: #4ee3ea;
+  --color-cyan-400: #16c2c9;
+  --color-cyan-500: #11acb2;
+  --color-cyan-600: #0d8c92;
+  --color-cyan-700: #0f7075;
+  --color-cyan-800: #12595d;
+  --color-cyan-900: #144a4d;
+  --color-cyan-950: #062a2c;
+
+  --color-sky-300: #4ee3ea;
+  --color-sky-400: #16c2c9;
+  --color-sky-500: #11acb2;
+  --color-sky-600: #0d8c92;
+
+  --color-blue-400: #16c2c9;
+  --color-blue-500: #11acb2;
+}
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+  }
+
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* Custom grid background for data engineering tech aesthetic */
+.bg-tech-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(22, 194, 201, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(22, 194, 201, 0.04) 1px, transparent 1px);
+}
+
+.bg-radial-gradient {
+  background: radial-gradient(circle at 50% 10%, rgba(22, 194, 201, 0.12) 0%, transparent 60%);
+}
+
+.font-mono-code {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Custom modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1120;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #16C2C9;
+}
+
+/* Animations for Floating Tech Icons & Neon Accents */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(8px) rotate(-2deg);
+  }
+}
+
+@keyframes neonBorderPulse {
+  0%, 100% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 8px rgba(22, 194, 201, 0.3));
+  }
+  50% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 16px rgba(22, 194, 201, 0.7));
+  }
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 36s linear infinite;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
+}
+
+@keyframes flowPacket {
+  0% {
+    left: 0%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.6);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.6);
+  }
+}
+
+.animate-flow-packet {
+  position: absolute;
+  top: 50%;
+  animation: flowPacket 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 7s ease-in-out infinite;
+}
+
+.animate-neon-pulse {
+  animation: neonBorderPulse 3s ease-in-out infinite;
+}
+
+/* Glassmorphism Card with Neon Border on Hover */
+.glass-card-neon {
+  position: relative;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(22, 194, 201, 0.18);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-neon:hover {
+  border-color: rgba(22, 194, 201, 0.65);
+  box-shadow: 0 0 25px rgba(22, 194, 201, 0.22), inset 0 0 15px rgba(22, 194, 201, 0.06);
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  
+  /* Hide page elements during print */
+  #main-navbar,
+  footer,
+  #hero,
+  #about,
+  #skills,
+  #experience,
+  #projects,
+  #certifications,
+  #contact,
+  .no-print {
+    display: none !important;
+  }
+
+  #printable-resume-modal-backdrop {
+    position: static !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    display: block !important;
+  }
+
+  #printable-resume-container {
+    max-width: 100% !important;
+    max-height: none !important;
+    background: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  #printable-resume-body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  #printable-resume-body * {
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  #printable-resume-body .text-cyan-400,
+  #printable-resume-body .text-cyan-300 {
+    color: #0d8c92 !important;
+  }
+
+  #printable-resume-body .bg-slate-900,
+  #printable-resume-body .bg-slate-950,
+  #printable-resume-body .bg-slate-800,
+  #printable-resume-body .bg-slate-900\/95,
+  #printable-resume-body .bg-slate-900\/80 {
+    background: #ffffff !important;
+  }
+}

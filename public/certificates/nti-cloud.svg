@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" width="1200" height="850">
+  <defs>
+    <!-- Background styling -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C8102E"/>
+      <stop offset="100%" stop-color="#960A20"/>
+    </linearGradient>
+    <linearGradient id="darkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B263B"/>
+      <stop offset="100%" stop-color="#0D1B2A"/>
+    </linearGradient>
+    <pattern id="dotPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#ffffff" opacity="0.3"/>
+    </pattern>
+    <pattern id="stripePattern" x="0" y="0" width="12" height="12" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#ffffff" stroke-width="2.5" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Clean White Background -->
+  <rect width="1200" height="850" fill="#FFFFFF"/>
+
+  <!-- Left Side Geometric Graphics (matching certificate scan) -->
+  <g>
+    <!-- Dark Blue Base polygon -->
+    <polygon points="0,0 200,0 0,650" fill="url(#darkGrad)"/>
+    <polygon points="0,150 160,0 0,600" fill="url(#stripePattern)"/>
+    
+    <!-- Red Accent polygon -->
+    <polygon points="0,80 180,240 70,680 0,600" fill="url(#redGrad)"/>
+    
+    <!-- Deep Blue bottom polygon -->
+    <polygon points="0,520 180,680 500,850 0,850" fill="url(#darkGrad)"/>
+    <polygon points="0,520 180,680 500,850 0,850" fill="url(#dotPattern)"/>
+    <polygon points="0,700 130,850 0,850" fill="url(#redGrad)"/>
+  </g>
+
+  <!-- Right Side Geometric Graphics -->
+  <g>
+    <polygon points="1200,0 1020,0 1200,320" fill="url(#redGrad)"/>
+    <polygon points="1200,0 1060,0 1200,280" fill="url(#stripePattern)"/>
+    <polygon points="1200,300 1140,420 1200,540" fill="#E2E8F0" opacity="0.4"/>
+    
+    <!-- Small triangular markers on right edge -->
+    <polygon points="1135,420 1145,410 1145,430" fill="#94A3B8"/>
+    <polygon points="1135,455 1145,445 1145,465" fill="#94A3B8"/>
+    <polygon points="1135,510 1145,500 1145,520" fill="#94A3B8"/>
+    <polygon points="1135,565 1145,555 1145,575" fill="#94A3B8"/>
+  </g>
+
+  <!-- HEADER: ITIDA Logo (Left) -->
+  <g transform="translate(180, 50)">
+    <!-- ITIDA Cube emblem -->
+    <g transform="scale(0.85)">
+      <polygon points="35,10 65,25 65,60 35,45" fill="#00A887"/>
+      <polygon points="35,10 5,25 5,60 35,45" fill="#94A3B8"/>
+      <polygon points="35,45 65,60 35,75 5,60" fill="#0EA5E9"/>
+      <path d="M35,15 L58,27 L58,54 L35,42 Z" fill="#ffffff" opacity="0.3"/>
+    </g>
+    <text x="75" y="48" font-family="'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="900" fill="#1E293B">itida</text>
+  </g>
+
+  <!-- HEADER: NTI Logo (Right) -->
+  <g transform="translate(850, 50)">
+    <!-- Blue Satellite dish circular emblem -->
+    <circle cx="45" cy="40" r="32" fill="none" stroke="#0077B6" stroke-width="2.5"/>
+    <!-- Dish lines inside circle -->
+    <path d="M28,45 C28,30 62,30 62,45" fill="none" stroke="#0077B6" stroke-width="2"/>
+    <line x1="45" y1="20" x2="45" y2="55" stroke="#0077B6" stroke-width="2"/>
+    <!-- NTI text -->
+    <text x="88" y="48" font-family="'Segoe UI', Roboto, Arial, sans-serif" font-size="38" font-weight="900" fill="#0077B6" letter-spacing="1">NTI</text>
+    <text x="8" y="80" font-family="'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#0077B6">National Telecommunication Institute</text>
+  </g>
+
+  <!-- Central Title: Certificate of Training -->
+  <g transform="translate(600, 230)">
+    <text x="0" y="0" text-anchor="middle" font-family="'Times New Roman', Georgia, serif" font-size="76" font-weight="bold" fill="#0F172A">Certificate</text>
+    <text x="0" y="52" text-anchor="middle" font-family="'Times New Roman', Georgia, serif" font-size="38" font-style="italic" fill="#334155">of Training</text>
+    
+    <!-- Hatched Red Seal Emblem on the right -->
+    <g transform="translate(360, -35)">
+      <circle cx="30" cy="30" r="48" fill="#991B1B"/>
+      <!-- Striped hatch on seal -->
+      <circle cx="30" cy="30" r="48" fill="url(#stripePattern)"/>
+    </g>
+  </g>
+
+  <!-- "Hereby granted to" -->
+  <text x="600" y="380" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="600" fill="#334155">Hereby granted to</text>
+
+  <!-- Recipient Name -->
+  <text x="600" y="440" text-anchor="middle" font-family="'Times New Roman', Georgia, serif" font-size="44" font-weight="bold" fill="#0F172A">Zakaria Ahmed Muhyiddin Almashd</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="495" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="20" font-style="italic" fill="#475569">Who had successfully completed the summer training course of</text>
+
+  <!-- Course Name -->
+  <text x="600" y="555" text-anchor="middle" font-family="'Times New Roman', Georgia, serif" font-size="36" font-weight="bold" fill="#0F172A">Cloud Essentials</text>
+
+  <!-- Course Metadata -->
+  <g transform="translate(600, 600)" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif">
+    <text x="0" y="0" font-size="17" font-weight="bold" fill="#0F172A">From 23 August to 17 September 2026</text>
+    <text x="0" y="24" font-size="15" font-weight="600" fill="#334155">120 Hours</text>
+    <text x="0" y="44" font-size="14" fill="#475569">Technical Hours (90 hrs)</text>
+    <text x="0" y="64" font-size="14" fill="#475569">Soft Skills Hours (30 hrs)</text>
+    <text x="0" y="86" font-size="16" font-weight="bold" fill="#0F172A">With Score : 84%</text>
+    <text x="0" y="106" font-size="14" font-weight="600" fill="#334155">Student ID : 253325</text>
+  </g>
+
+  <!-- Signatures Section -->
+  <!-- ITIDA Signature (Left) -->
+  <g transform="translate(540, 750)">
+    <!-- Stylized handwritten signature in blue -->
+    <path d="M-90,-15 C-70,-40 -50,5 -30,-20 C-10,-45 20,10 60,-15" fill="none" stroke="#1D4ED8" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="0" y="25" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">Eng. Ahmed El Zaher</text>
+    <text x="0" y="48" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#334155">ITIDA - CEO</text>
+  </g>
+
+  <!-- NTI Signature (Right) -->
+  <g transform="translate(790, 750)">
+    <!-- Stylized handwritten signature in teal/blue -->
+    <path d="M-90,-5 C-60,-45 -40,15 -10,-30 C15,-5 40,-40 80,-10" fill="none" stroke="#0E7490" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="0" y="25" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="bold" fill="#0F172A">Prof. Ahmed Khattab</text>
+    <text x="0" y="48" text-anchor="middle" font-family="'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#334155">NTI - Director</text>
+  </g>
+</svg>
